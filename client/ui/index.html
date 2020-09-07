@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="./vue.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ul id="app" class="menu menu-user" v-if="menu">
+          <li  v-for="items in menu.items"><a @click="onClick(items.name)"><span v-if="items.emoji" class="emoji">{{items.emoji}}</span>{{items.label}}</a></li>
+        </ul>
+
+        <!-- JS Scripts -->
+        <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+        <script src="front.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
